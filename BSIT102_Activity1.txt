@@ -1,0 +1,42 @@
+import java.io.*;
+public class Calculator {
+
+    public static void main(String[] args) throws Exception {
+    	DataInputStream input = new DataInputStream(System.in);
+    	
+    	int x;
+    	int y;
+    	int ans;
+    	String K;
+    	
+    	System.out.println("Enter 1st Number");
+    	x=Integer.parseInt(input.readLine());
+    	System.out.println("Enter 2nd Number");
+    	y=Integer.parseInt(input.readLine());
+    	System.out.println("Select Operation");
+    	K=input.readLine();
+    	switch(K) {
+    	case "+":
+    		ans=x+y;
+    		System.out.println("The Answer is "+ans);
+    		break;
+    	case "-":
+    		ans=x-y;
+    		System.out.println("The Answer is "+ans);
+    		break;
+    	case "*":
+    		ans=x*y;
+    		System.out.println("The Answer is "+ans);
+    		break;
+    	case "/":
+    		ans=x/y;
+    		System.out.println("The Answer is "+ans);
+    		break;
+    	default:
+    		System.out.println("Error ");
+    		break;
+    	}
+    }
+    
+    
+}
